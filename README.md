@@ -21,8 +21,7 @@ name: hytale
 services:
   hytale:
     container_name: hytale
-    image: hytale
-    build: .
+    image: jirisitera/hytale-server
     restart: on-failure:3
     stdin_open: true
     tty: true
