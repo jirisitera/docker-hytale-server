@@ -4,7 +4,7 @@
 
 ## Download
 
-- **Docker Hub**: [jirisitera/docker-hytale-server](https://hub.docker.com/r/jirisitera/docker-hytale-server)
+- **Docker Hub**: [jirisitera/hytale-server](https://hub.docker.com/r/jirisitera/hytale-server)
 - **Alternative (GHCR)**: [ghcr.io/jirisitera/docker-hytale-server](https://ghcr.io/jirisitera/docker-hytale-server)
 
 ## Features
