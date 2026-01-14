@@ -1,0 +1,23 @@
+name: hytale
+services:
+  hytale:
+    container_name: hytale
+    image: hytale
+    build: .
+    restart: on-failure:3
+    stdin_open: true
+    tty: true
+    networks:
+      - hytale
+    volumes:
+      - hytale:/data
+    ports:
+      - "5520:5520/udp"
+    environment:
+      HYTALE_AUTO_DOWNLOAD: "true"
+networks:
+  hytale:
+    name: hytale
+volumes:
+  hytale:
+    name: hytale
