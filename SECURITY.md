@@ -6,9 +6,7 @@ Only the default branch is guaranteed to receive security updates and fixes.
 
 ## Reporting a vulnerability
 
-To privately report vulnerabilities, use GitHub Security Advisories:
-
-- https://github.com/jirisitera/docker-hytale-server/security/advisories/new
+To privately report vulnerabilities, use [GitHub Security Advisories](https://github.com/jirisitera/docker-hytale-server/security/advisories/new).
 
 Include:
 
