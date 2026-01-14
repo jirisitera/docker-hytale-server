@@ -28,8 +28,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/jirisitera/docker-hytale-server
-            jirisitera/docker-hytale-server
+            ghcr.io/${{ secrets.DOCKER_REPOSITORY }}
+            ${{ secrets.DOCKER_REPOSITORY }}
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
@@ -41,7 +41,7 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v3
         with:
-          subject-name: index.docker.io/jirisitera/docker-hytale-server
+          subject-name: index.docker.io/${{ secrets.DOCKER_REPOSITORY }}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
       - name: Create GitHub Release
