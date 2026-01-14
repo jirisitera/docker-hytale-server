@@ -28,11 +28,13 @@ jobs:
           images: |
             ghcr.io/${{ secrets.DOCKER_REPOSITORY }}
             ${{ secrets.DOCKER_REPOSITORY }}
+          tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_REPOSITORY }}/latest
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
