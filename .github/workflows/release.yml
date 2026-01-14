@@ -1,7 +1,5 @@
 name: Release Hytale Docker Image
-on:
-  workflow_dispatch:
-    branches: [main]
+on: [workflow_dispatch]
 permissions:
   id-token: write
   contents: write # required for GHCR
